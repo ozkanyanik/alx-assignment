@@ -1,0 +1,7 @@
+{
+  "ConnectionStrings": {
+    "DevConn": ""
+  },
+  "JWTTokenExpiryTime": 2, //hours
+  "JWTSecretKey": "BoCngxHdEp0X0TUMyCtrIpzfLHdkeaRgK53QFeIOrw8"
+}

@@ -1,0 +1,15 @@
+@import '../node_modules/devextreme/dist/css/dx.common.css';
+@import '../node_modules/devextreme/dist/css/dx.light.css';
+
+html, body { height: 101%; }
+
+.messageBox{
+    width: 72%;
+    margin-bottom: 4px;
+    padding-top: 5px;
+    margin-top: 50px;
+    height: 30px;
+    margin-left: 120px;
+    text-align: left;
+}
+

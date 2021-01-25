@@ -1,0 +1,31 @@
+<div class="service-search">
+    <input type="text" class="form-control search-input" [(ngModel)]="searchText" (keyup)="searchTextChange($event)" />
+    <button type="button" class="reset-btn btn btn-outline-secondary" (click)="clearSearch()" >Reset</button>
+</div>
+<div class="service" *ngFor="let i of serviceList; let x=index;">
+    <div class="service-container">
+        <div class="info">
+            <span class="service-name">{{i.serviceName}}</span>
+            <span class="service-description">{{i.description}}</span>
+        </div>
+        <div class="promo">
+            <div class="promo-label">
+                <span>Promo Code</span>
+            </div>
+            <div class="promo-input">
+                <input type="text" name="PromoCode" class="form-control promo-code-input" [(ngModel)]="promoCode[x]" />
+                <button type="button" class="activate-bonus-btn btn btn-primary" [disabled]="i.status==1"(click)="activate(i.id,x)" >Activate Bonus</button>
+            </div>
+        </div>
+    </div>
+    <div class="activated-list">
+        <span *ngIf="i.status == 1">
+            You have been activate bonus for this service!
+        </span>
+    </div>
+</div>
+
+
+<div class="page-end" *ngIf="loadedAll && serviceList.length > 0">
+    <span>All records loaded!</span>
+</div>

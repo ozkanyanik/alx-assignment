@@ -1,0 +1,23 @@
+.error-message {
+    color: red;
+    font-size: 20px;
+    font-variant-caps: titling-caps;
+    text-transform: none;
+    padding: 0px 0px 5px 15px;
+}
+
+.errorOnEmail{
+    color: red;
+    font-size: 20px;
+    font-variant-caps: titling-caps;
+    text-transform: none;
+    padding: 0px 0px 5px 15px;
+}
+
+.success-message {
+    color: red;
+    font-size: 20px;
+    font-variant-caps: titling-caps;
+    text-transform: none;
+    padding: 0px 0px 5px 15px;
+}

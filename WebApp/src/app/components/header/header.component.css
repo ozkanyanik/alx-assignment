@@ -1,0 +1,31 @@
+.logocontainer{
+    text-align:left;
+    float: left;
+    margin-top: 5px;
+}
+
+.top-menu{    
+    display: inline-block;
+    max-height: 30px;
+    margin-left: 40px;
+    padding: 10px;
+}
+.top-menu ul{
+    list-style: none;
+    display: inline;
+    max-height: 30px;
+    
+}
+.menu-item {
+    padding-left: 30px;
+    float: left;
+    font-size: 14px;
+}
+.menu-item a:hover{
+    color: #7a7878 !important;    
+}
+.menu-item a {
+    color: #50b4c7 !important;
+    text-decoration: none;
+    cursor: pointer;
+}

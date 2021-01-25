@@ -1,0 +1,13 @@
+<header>
+    <div class="logocontainer">
+        <a [routerLink]="['/']">
+            <img class="logo" width="100" alt="ALX" src="assets/logo.png">
+        </a>
+    </div>
+
+    <div class="top-menu" *ngIf="show">
+        <ul>
+            <li class="menu-item"><a (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</header>
