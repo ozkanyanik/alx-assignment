@@ -125,19 +125,18 @@ export class MainComponent implements OnInit {
     var arg = new ApplyPromoArgument();
     arg.promoCode = this.promoCode[index];
     arg.serviceId = serviceId;
+    
     this.dataService.applyPromo(arg).subscribe(
       data => {
         this.dataService.hideLoader();
-        console.log(data);
-       this.messageService.success(data.value);
-       
+        this.messageService.success(data);
       }, 
       error => 
       {
-        console.log(error);
+       console.log(error);
+       this.dataService.hideLoader();
         if (error) {
           if (error.status == 401) {
-            this.dataService.hideLoader();
             this.dataService.logoutState();
             this.router.navigate(["/login"]);
           }

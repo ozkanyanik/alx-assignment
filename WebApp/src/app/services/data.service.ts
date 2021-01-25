@@ -44,8 +44,7 @@ export class DataService {
   }
 
   applyPromo(arg: ApplyPromoArgument){
-    return this.httpClient.post<any>(this.dataApiEndPoint + 'services/ApplyPromoCode', arg, {headers: this.initializeHeaders()} )
-    
+    return this.httpClient.post(this.dataApiEndPoint + 'services/ApplyPromoCode/', arg, {headers: this.initializeHeaders(), responseType: 'text'})
   }
 
   loginState(){
@@ -74,7 +73,7 @@ export class DataService {
         token = user.token;
       }
     }
-    return new HttpHeaders({ 'Cache-Control': 'no-cache',  'Authorization': 'Bearer ' + token});
+    return new HttpHeaders({ 'Cache-Control': 'no-cache', 'Authorization': 'Bearer ' + token});
   }
 }
 
